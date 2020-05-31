@@ -72,8 +72,8 @@ const Features = () => (
         />
       </HeadingContainer>
       <FeatureBoxContainer>
-        {iter.map((item) => (
-          <FeatureBox img={item.img} properties={item.properties} />
+        {iter.map(({ id, img, properties }) => (
+          <FeatureBox key={id} img={img} properties={properties} />
         ))}
       </FeatureBoxContainer>
     </Container>

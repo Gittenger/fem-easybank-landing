@@ -2,6 +2,8 @@ import React from "react";
 
 import { ContainerDiv } from "./container.styles";
 
-const Container = ({ children }) => <ContainerDiv>{children}</ContainerDiv>;
+const Container = ({ className, children }) => (
+  <ContainerDiv className={className}>{children}</ContainerDiv>
+);
 
 export default Container;

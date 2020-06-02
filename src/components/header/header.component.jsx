@@ -8,26 +8,41 @@ import { HeaderContainer, LogoContainer, NavLinks } from "./header.styles";
 
 const Header = () => (
   <HeaderContainer>
-    <Container>
+    <Container className="header-container">
       <LogoContainer>
         <img src={LogoImg} alt="" />
       </LogoContainer>
       <NavLinks>
         <ul>
           <li>
-            <a href="#">Home</a>
+            <a href="#">
+              Home
+              <div className="hover-box"></div>
+            </a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="#">
+              About
+              <div className="hover-box"></div>
+            </a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="#">
+              Contact
+              <div className="hover-box"></div>
+            </a>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <a href="#">
+              Blog
+              <div className="hover-box"></div>
+            </a>
           </li>
           <li>
-            <a href="#">Careers</a>
+            <a href="#">
+              Careers
+              <div className="hover-box"></div>
+            </a>
           </li>
         </ul>
       </NavLinks>

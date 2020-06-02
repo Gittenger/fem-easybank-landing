@@ -10,9 +10,10 @@ export const HeaderContainer = styled.header`
   position: relative;
   z-index: 100;
 
-  & > *:first-child {
+  & > *.header-container {
     ${FlexCenter}
     justify-content: space-between;
+    height: 100%;
   }
 `;
 
@@ -20,12 +21,41 @@ export const LogoContainer = styled.div``;
 
 export const NavLinks = styled.nav`
   ${FlexCenter}
+  height: 100%;
 
   ul {
     ${FlexCenter}
+    height: 100%;
 
     li {
+      ${FlexCenter}
       margin: 0 1rem;
+      height: 100%;
+
+      a {
+        ${FlexCenter}
+        height: 100%;
+        position: relative;
+        overflow-y: hidden;
+
+        .hover-box {
+          height: 4px;
+          width: 100%;
+          transform: translateY(200px);
+          transition: transform 0.3s;
+        }
+
+        &:hover {
+          & > .hover-box {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateY(0);
+            background: ${({ theme: { colors } }) =>
+              `linear-gradient(to right, ${colors.limeGreen}, ${colors.brightCyan})`};
+          }
+        }
+      }
     }
   }
 `;

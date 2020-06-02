@@ -17,7 +17,14 @@ export const ArticleBoxesContainer = styled.div`
   ${FlexCenter}
   justify-content: space-between;
 
-  & > * {
+  & > a {
     margin-right: 2rem;
+
+    &:hover {
+      & h3 {
+        transition: color 0.2s;
+        color: ${({ theme: { colors } }) => colors.limeGreen};
+      }
+    }
   }
 `;

@@ -4,11 +4,11 @@ import Container from "../container/container.component";
 import Button from "../button/button.component";
 
 import LogoImg from "../../assets/logo-white.svg";
-import Facebook from "../../assets/icon-facebook.svg";
-import Youtube from "../../assets/icon-youtube.svg";
-import Twitter from "../../assets/icon-twitter.svg";
-import Pinterest from "../../assets/icon-pinterest.svg";
-import Instagram from "../../assets/icon-instagram.svg";
+import { ReactComponent as Facebook } from "../../assets/icon-facebook.svg";
+import { ReactComponent as Youtube } from "../../assets/icon-youtube.svg";
+import { ReactComponent as Twitter } from "../../assets/icon-twitter.svg";
+import { ReactComponent as Pinterest } from "../../assets/icon-pinterest.svg";
+import { ReactComponent as Instagram } from "../../assets/icon-instagram.svg";
 
 import { FooterContainer } from "./footer.styles";
 
@@ -22,34 +22,56 @@ const Footer = () => (
         <div className="footer-icons">
           <ul>
             <li>
-              <img src={Facebook} alt="" />
+              <a href="#">
+                <Facebook />
+              </a>
             </li>
             <li>
-              <img src={Youtube} alt="" />
+              <a href="#">
+                <Youtube />
+              </a>
             </li>
             <li>
-              <img src={Twitter} alt="" />
+              <a href="#">
+                <Twitter />
+              </a>
             </li>
             <li>
-              <img src={Pinterest} alt="" />
+              <a href="#">
+                <Pinterest />
+              </a>
             </li>
             <li>
-              <img src={Instagram} alt="" />
+              <a href="#">
+                <Instagram />
+              </a>
             </li>
           </ul>
         </div>
       </div>
       <div className="footer-links">
         <ul>
-          <div className="col-1">
-            <li>About Us</li>
-            <li>Contact</li>
-            <li>Blog</li>
+          <div className="col-1 col">
+            <li>
+              <a href="#">About Us</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
           </div>
-          <div className="col-2">
-            <li>Careers</li>
-            <li>Support</li>
-            <li>Privacy Policy</li>
+          <div className="col-2 col">
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">Support</a>
+            </li>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
           </div>
         </ul>
       </div>

@@ -10,7 +10,7 @@ export const FooterContainer = styled.div`
 
     & > *.content-container {
         display: grid;
-        grid-template-columns: 1fr 3fr 1.3fr;
+        grid-template-columns: 1.5fr 3fr 1.3fr;
         height: 10rem;
 
         .footer-head {
@@ -20,15 +20,23 @@ export const FooterContainer = styled.div`
             align-items: flex-start;
 
             .footer-icons {
-                width: 70%;
+                width: 55%;
 
                 ul {
                     ${FlexCenter}
                     justify-content: space-between;
                     width: 100%;
 
-                    & > * {
+                    & > li {
                         margin-right: .6rem;
+                    }
+
+                    a path {
+                        transition: all .3s;
+                    }
+
+                    a:hover path {
+                        fill: ${({ theme: { colors } }) => colors.limeGreen};
                     }
                 }
             }
@@ -41,20 +49,27 @@ export const FooterContainer = styled.div`
                 height: 100%;
                 padding-top: .5rem;
 
-                .col-1 {
-                    grid-column: 1 / 2;
+                a {
+                    transition: color .2s;
+
+                    &:hover {
+                        color: ${({ theme: { colors } }) => colors.limeGreen};
+                    }
+                }
+
+                .col {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
                     justify-content: space-between;
                 }
 
+                .col-1 {
+                    grid-column: 1 / 2;
+                }
+
                 .col-2 {
                     grid-column: 2 / 3;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    justify-content: space-between;
                 }
             }
         }
@@ -65,7 +80,7 @@ export const FooterContainer = styled.div`
             flex-direction: column;
             align-items: flex-end;
             justify-content: space-between;
-            height: 70%;
+            height: 90%;
             
             .footer-copyright {
                 font-size: .8em;

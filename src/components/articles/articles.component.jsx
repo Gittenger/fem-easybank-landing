@@ -9,11 +9,11 @@ const iter = [
   {
     id: 1,
     img: "currency",
-    author: "John Doe",
+    author: "Claire Robinson",
     properties: {
-      heading: "Currency article",
+      heading: "Receive money in any currency with no fees",
       info:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo minus reiciendis ut ducimus fugit impedit!",
+        "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single...",
       priority: "h3",
       alignment: "left",
     },
@@ -21,11 +21,11 @@ const iter = [
   {
     id: 2,
     img: "restaurant",
-    author: "John Doe",
+    author: "Wilson Hutton",
     properties: {
-      heading: "Restaurant article",
+      heading: "Treat yourself without worrying about money",
       info:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo minus reiciendis ut ducimus fugit impedit!",
+        "Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you...",
       priority: "h3",
       alignment: "left",
     },
@@ -33,11 +33,11 @@ const iter = [
   {
     id: 3,
     img: "plane",
-    author: "John Doe",
+    author: "Wilson Hutton",
     properties: {
-      heading: "Plane article",
+      heading: "Take your Easybank card wherever you go",
       info:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo minus reiciendis ut ducimus fugit impedit!",
+        "We want you to enjoy your travels. This is why we don't charge any fees on purchases while you're abroad. We'll even show you...",
       priority: "h3",
       alignment: "left",
     },
@@ -45,11 +45,11 @@ const iter = [
   {
     id: 4,
     img: "confetti",
-    author: "John Doe",
+    author: "Claire Robinson",
     properties: {
-      heading: "Confetti article",
+      heading: "Our invite-only Beta accounts are now live!",
       info:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo minus reiciendis ut ducimus fugit impedit!",
+        "After a lot of hard work by the whole team, we're excited to launch our closed beta. It's easy to request an invite through the site...",
       priority: "h3",
       alignment: "left",
     },
@@ -62,9 +62,11 @@ const Articles = () => (
       <h2>Latest Articles</h2>
       <ArticleBoxesContainer>
         {iter.map(({ id, ...rest }) => (
-          <ArticleBox key={id} {...rest}>
-            Article {id}
-          </ArticleBox>
+          <a href="#">
+            <ArticleBox key={id} {...rest}>
+              Article {id}
+            </ArticleBox>
+          </a>
         ))}
       </ArticleBoxesContainer>
     </Container>

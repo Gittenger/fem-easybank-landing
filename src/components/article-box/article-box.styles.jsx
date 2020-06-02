@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { FlexCenter, device } from "../../style-utils/utils.styles";
 
-const { laptopM } = device;
+const { laptopM, laptopS } = device;
 
 export const ArticleBoxContainer = styled.div`
   ${FlexCenter}
@@ -37,6 +37,18 @@ export const ArticleBoxContainer = styled.div`
 
     .content-container {
       padding: 1.5rem;
+    }
+  }
+
+  @media ${laptopS} {
+    width: 23rem;
+
+    .img-box {
+      height: 14rem;
+    }
+
+    .content-container {
+      padding: 1.3rem;
     }
   }
 `;

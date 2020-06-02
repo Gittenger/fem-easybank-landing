@@ -16,6 +16,9 @@ const theme = {
     laptopM: {
       contentWidth: "1100px",
     },
+    laptopS: {
+      contentWidth: "985px",
+    },
   },
 };
 

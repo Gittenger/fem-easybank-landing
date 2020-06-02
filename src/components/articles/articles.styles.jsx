@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { FlexCenter, device } from "../../style-utils/utils.styles";
 
-const { laptopM } = device;
+const { laptopM, laptopS } = device;
 
 export const ArticlesContainer = styled.div`
   ${FlexCenter}
@@ -28,6 +28,10 @@ export const ArticlesContainer = styled.div`
       }
     }
   }
+
+  @media ${laptopS} {
+    font-size: 1.5rem;
+  }
 `;
 
 export const ArticleBoxesContainer = styled.div`
@@ -44,6 +48,13 @@ export const ArticleBoxesContainer = styled.div`
         transition: color 0.2s;
         color: ${({ theme: { colors } }) => colors.limeGreen};
       }
+    }
+  }
+
+  @media ${laptopS} {
+    & > a {
+      margin-right: 1.5rem;
+      max-height: 43rem;
     }
   }
 `;

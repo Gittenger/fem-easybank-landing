@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-import { FlexCenter } from "../../style-utils/utils.styles";
+import { FlexCenter, device } from "../../style-utils/utils.styles";
+
+const { laptopM } = device;
 
 export const ArticleBoxContainer = styled.div`
   ${FlexCenter}
@@ -24,5 +26,17 @@ export const ArticleBoxContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     padding: 2rem;
+  }
+
+  @media ${laptopM} {
+    width: 25rem;
+
+    .img-box {
+      height: 16rem;
+    }
+
+    .content-container {
+      padding: 1.5rem;
+    }
   }
 `;

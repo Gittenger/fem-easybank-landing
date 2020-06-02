@@ -7,6 +7,7 @@ export const FooterContainer = styled.div`
     background-color: ${({ theme: { colors } }) => colors.darkBlue};
     color: ${({ theme: { colors } }) => colors.white};
     padding: 4rem 0 4rem;
+    width: 100%;
 
     & > *.content-container {
         display: grid;

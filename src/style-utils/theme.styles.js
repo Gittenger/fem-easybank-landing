@@ -9,8 +9,13 @@ const theme = {
     white: "#ffffff",
   },
   layout: {
-    appWidth: "1440px",
-    contentWidth: "1200px",
+    desktop: {
+      appWidth: "1440px",
+      contentWidth: "1200px",
+    },
+    laptopM: {
+      contentWidth: "1100px",
+    },
   },
 };
 

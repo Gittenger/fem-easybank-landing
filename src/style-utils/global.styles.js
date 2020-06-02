@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
+import { FlexCenter } from "./utils.styles";
+
 const GlobalStyles = createGlobalStyle`
     *{
     padding: 0;
@@ -13,11 +15,20 @@ html{
 }
 
 body{
+    ${FlexCenter}
+    flex-direction: column;
     font-size: 1.8rem;
-    max-width: 100vw;
+    width: 100vw;
     background-color: ${({ theme: { colors } }) => colors.greyLight};
     font-family: 'Public Sans', sans-serif;
     position: relative;
+    overflow-x: hidden;
+}
+
+#root {
+    width: 100%;
+    ${FlexCenter}
+    flex-direction: column;
 }
 
 a{

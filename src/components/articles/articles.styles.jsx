@@ -1,24 +1,43 @@
 import styled from "styled-components";
 
-import { FlexCenter } from "../../style-utils/utils.styles";
+import { FlexCenter, device } from "../../style-utils/utils.styles";
+
+const { laptopM } = device;
 
 export const ArticlesContainer = styled.div`
   ${FlexCenter}
-  padding-top: 10rem;
+  padding: 10rem 0 6rem;
+  width: 100%;
 
   & > *.content-container {
     ${FlexCenter}
     flex-direction: column;
     align-items: flex-start;
+
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  @media ${laptopM} {
+    font-size: 1.6rem;
+
+    & > *.content-container {
+      h2 {
+        margin-bottom: 1rem;
+      }
+    }
   }
 `;
 
 export const ArticleBoxesContainer = styled.div`
-  ${FlexCenter}
+  display: flex;
+  align-items: flex-start;
   justify-content: space-between;
 
   & > a {
     margin-right: 2rem;
+    max-height: 45rem;
 
     &:hover {
       & h3 {

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-import { FlexCenter } from "../../style-utils/utils.styles";
+import { FlexCenter, device } from "../../style-utils/utils.styles";
+
+const { laptopM } = device;
 
 export const HeaderContainer = styled.header`
   ${FlexCenter}
@@ -14,6 +16,9 @@ export const HeaderContainer = styled.header`
     ${FlexCenter}
     justify-content: space-between;
     height: 100%;
+  }
+
+  @media ${laptopM} {
   }
 `;
 

@@ -58,7 +58,7 @@ const iter = [
 
 const Articles = () => (
   <ArticlesContainer>
-    <Container class="content-container">
+    <Container className="content-container">
       <h2>Latest Articles</h2>
       <ArticleBoxesContainer>
         {iter.map(({ id, ...rest }) => (

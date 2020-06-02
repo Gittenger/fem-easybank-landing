@@ -1,18 +1,25 @@
 import styled from "styled-components";
 
-import { FlexCenter } from "../../style-utils/utils.styles";
+import { FlexCenter, device } from "../../style-utils/utils.styles";
+
+const { laptopM } = device;
 
 export const FeaturesContainer = styled.div`
   ${FlexCenter}
   position: relative;
   z-index: 0;
-  padding: 10rem;
+  width: 100%;
+  padding: 10rem 0;
   background-color: ${({ theme: { colors } }) => colors.greyBlueLight};
 
   .content-container {
     ${FlexCenter}
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  @media ${laptopM} {
+    padding: ;
   }
 `;
 

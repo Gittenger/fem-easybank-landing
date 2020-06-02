@@ -2,6 +2,7 @@ import React from "react";
 
 import Container from "../container/container.component";
 import InfoBox from "../info-box/info-box.component";
+import Button from "../button/button.component";
 
 import HeroMockupsImg from "../../assets/image-mockups.png";
 import {
@@ -23,7 +24,7 @@ const Hero = () => (
             alignment: "left",
           }}
         />
-        <button>Request invite</button>
+        <Button>Request invite</Button>
       </ContentContainer>
     </Container>
     <BackgroundContainer>

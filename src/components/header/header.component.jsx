@@ -1,6 +1,7 @@
 import React from "react";
 
 import Container from "../container/container.component";
+import Button from "../button/button.component";
 
 import LogoImg from "../../assets/logo.svg";
 import { HeaderContainer, LogoContainer, NavLinks } from "./header.styles";
@@ -30,7 +31,7 @@ const Header = () => (
           </li>
         </ul>
       </NavLinks>
-      <button>Request invite</button>
+      <Button>Request invite</Button>
     </Container>
   </HeaderContainer>
 );

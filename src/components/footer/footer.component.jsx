@@ -1,6 +1,7 @@
 import React from "react";
 
 import Container from "../container/container.component";
+import Button from "../button/button.component";
 
 import LogoImg from "../../assets/logo-white.svg";
 import Facebook from "../../assets/icon-facebook.svg";
@@ -53,7 +54,7 @@ const Footer = () => (
         </ul>
       </div>
       <div className="footer-tail">
-        <button>Request invite</button>
+        <Button>Request invite</Button>
         <div className="footer-copyright">
           &copy; Easybank. All Rights Reserved
         </div>

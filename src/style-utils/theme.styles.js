@@ -19,6 +19,12 @@ const theme = {
     laptopS: {
       contentWidth: "985px",
     },
+    laptopXS: {
+      contentWidth: "905px",
+    },
+    tabletLand: {
+      contentWidth: "85%",
+    },
   },
 };
 

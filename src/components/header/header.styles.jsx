@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { FlexCenter, device } from "../../style-utils/utils.styles";
 
-const { laptopM } = device;
+const { laptopM, tabletM } = device;
 
 export const HeaderContainer = styled.header`
   ${FlexCenter}
@@ -18,7 +18,10 @@ export const HeaderContainer = styled.header`
     height: 100%;
   }
 
-  @media ${laptopM} {
+  @media ${tabletM} {
+    & > *.header-container > button {
+      display: none;
+    }
   }
 `;
 

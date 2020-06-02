@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { FlexCenter, device } from "../../style-utils/utils.styles";
 
-const { laptopM } = device;
+const { laptopM, tabletM } = device;
 
 export const FeaturesContainer = styled.div`
   ${FlexCenter}
@@ -25,9 +25,19 @@ export const FeaturesContainer = styled.div`
 
 export const HeadingContainer = styled.div`
   width: 35%;
+
+  @media ${tabletM} {
+    width: 90%;
+  }
 `;
 
 export const FeatureBoxContainer = styled.div`
   ${FlexCenter}
   justify-items: space-between;
+
+  @media ${tabletM} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 `;

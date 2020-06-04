@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { FlexCenter, device } from "../../style-utils/utils.styles";
 
-const { laptopM, tabletM } = device;
+const { laptopM, tabletM, mobileM } = device;
 
 export const FeaturesContainer = styled.div`
   ${FlexCenter}
@@ -39,5 +39,10 @@ export const FeatureBoxContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+  }
+
+  @media ${mobileM} {
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
 `;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { FlexCenter, device } from "../../style-utils/utils.styles";
 
-const { laptopM, laptopS, tabletLand, tabletM } = device;
+const { laptopM, laptopS, tabletLand, tabletM, mobileM } = device;
 
 export const ArticlesContainer = styled.div`
   ${FlexCenter}
@@ -38,6 +38,14 @@ export const ArticlesContainer = styled.div`
     & > *.content-container {
       display: block;
     }
+  }
+
+  @media ${mobileM} {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 60rem;
+    justify-content: center;
+    justify-items: center;
   }
 `;
 
@@ -75,5 +83,14 @@ export const ArticleBoxesContainer = styled.div`
     grid-template-rows: 50rem 50rem;
     width: 100%;
     height: 100rem;
+  }
+
+  @media ${mobileM} {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 40rem);
+
+    & > a {
+      margin: 0;
+    }
   }
 `;

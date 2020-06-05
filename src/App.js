@@ -1,6 +1,7 @@
 import React from "react";
 
 import Header from "./components/header/header.component";
+import MobileMenu from "./components/mobileMenu/mobileMenu.component";
 import Hero from "./components/hero/hero.component";
 import Features from "./components/features/features.component";
 import Articles from "./components/articles/articles.component";
@@ -13,6 +14,7 @@ function App() {
     <>
       <GlobalStyles />
       <Header />
+      <MobileMenu />
       <Hero />
       <Features />
       <Articles />

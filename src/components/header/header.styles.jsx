@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { FlexCenter, device } from "../../style-utils/utils.styles";
 
-const { laptopM, tabletM } = device;
+const { tabletM, tabletS } = device;
 
 export const HeaderContainer = styled.header`
   ${FlexCenter}
@@ -65,5 +65,9 @@ export const NavLinks = styled.nav`
         }
       }
     }
+  }
+
+  @media ${tabletS} {
+    display: none;
   }
 `;

@@ -78,7 +78,8 @@ const Footer = () => (
       <div className="footer-tail">
         <Button>Request invite</Button>
         <div className="footer-copyright">
-          &copy; Easybank. All Rights Reserved
+          <span className="copyright-line-1">&copy; Easybank.</span>
+          <span className="copyright-line-2">All Rights Reserved</span>
         </div>
       </div>
     </Container>

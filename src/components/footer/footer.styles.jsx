@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-import { FlexCenter } from "../../style-utils/utils.styles";
+import { FlexCenter, device } from "../../style-utils/utils.styles";
+
+const { laptopXS, tabletLand, tabletM } = device;
 
 export const FooterContainer = styled.div`
     ${FlexCenter}
@@ -85,6 +87,43 @@ export const FooterContainer = styled.div`
             
             .footer-copyright {
                 font-size: .8em;
+            }
+        }
+    }
+
+    @media ${laptopXS} {
+        & > *.content-container {
+        grid-template-columns: 1.8fr 2.5fr 1.5fr;
+        height: 10rem;
+
+        .footer-head {
+            .footer-icons {
+                width: 65%;
+            }
+        }
+    
+
+        .footer-links {
+                ul{
+                    grid-template-columns: 1.4fr 2fr;
+            }
+        }
+    }
+
+    @media ${tabletLand} {
+        .footer-copyright {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+    }
+
+    @media ${tabletM} {
+        & > *.content-container {
+        .footer-head {
+            .footer-icons {
+                width: 75%;
             }
         }
     }

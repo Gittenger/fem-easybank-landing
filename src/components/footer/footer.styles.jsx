@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { FlexCenter, device } from "../../style-utils/utils.styles";
 
-const { laptopXS, tabletLand, tabletM } = device;
+const { laptopXS, tabletLand, tabletM, tabletS } = device;
 
 export const FooterContainer = styled.div`
     ${FlexCenter}
@@ -124,6 +124,78 @@ export const FooterContainer = styled.div`
         .footer-head {
             .footer-icons {
                 width: 75%;
+            }
+        }
+    }
+
+    @media ${tabletS} {
+        & > *.content-container {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        justify-items: center;
+        height: auto;
+
+        .footer-head {
+            width: 65%;
+            align-items: center;
+
+            & > * {
+                margin-bottom: 1.5rem;
+            }
+
+            .footer-logo {
+                width: 60%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .footer-icons {
+                width: 100%;
+            }
+        }
+
+        .footer-links {
+            ul {
+                grid-template-columns: 1fr;
+                justify-content: center;
+                justify-items: center;
+                margin-bottom: 1rem;
+
+                .col {
+                    width: 100%;
+                    grid-column: 1 / 2;
+                    margin-bottom: 1.5rem;
+                    
+                    li {
+                        width: 100%;
+
+                        &:not(:last-child) {
+                            margin-bottom: 1.5rem;
+                        }
+    
+                        a {
+                            ${FlexCenter}
+                            width: 100%;
+                        }
+                    }
+                }  
+            }
+        }
+
+        .footer-tail {
+            height: 100%;
+            align-items: center;
+            button {
+                padding: 1.2rem 1.8rem;
+                width: 80%;
+                font-size: 1.7rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .footer-copyright {
+                flex-direction: row;
             }
         }
     }

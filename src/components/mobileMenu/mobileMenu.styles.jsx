@@ -19,6 +19,7 @@ export const MobileMenuContainer = styled.div`
     width: 35px;
     height: 25px;
     margin: 2.5rem 2.5rem 0 0;
+    cursor: pointer;
     ${FlexCenter}
     flex-direction: column;
     justify-content: space-between;

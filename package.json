@@ -2,6 +2,7 @@
 	"name": "easybank-landing",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "https://gittenger.github.io/fem-easybank-landing",
 	"dependencies": {
 		"@testing-library/jest-dom": "^4.2.4",
 		"@testing-library/react": "^9.5.0",
